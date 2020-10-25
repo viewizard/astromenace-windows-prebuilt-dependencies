@@ -1,0 +1,1 @@
+# astromenace-mingw-deps
