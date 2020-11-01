@@ -1,5 +1,5 @@
 ### Download prebuilt dependencies for MinGW 32bit build: [prebuilt_dep_mingw_32bit.zip](https://github.com/viewizard/astromenace-windows-prebuilt-dependencies/releases/download/latest/prebuilt_dep_mingw_32bit.zip)
-Based on lib's sources and binary packages available for download from `Release` page.
+Based on lib's sources and binary packages available for download from `Releases` page.
 
 #### OpenAL (bin)
 https://openal-soft.org/#download
