@@ -1,0 +1,11 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -469,6 +469,7 @@
+   list(APPEND PKG_CONFIG_REQUIRED_PRIVATE "libbrotlidec")
+ endif ()
+ 
++target_link_libraries(freetype "-static -static-libgcc -static-libstdc++")
+ 
+ # Installation
+ include(GNUInstallDirs)
+

@@ -1,0 +1,21 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -72,7 +72,7 @@
+ ADD_DEFINITIONS(-DHAVE_CONFIG_H)
+ ADD_DEFINITIONS(-DNDEBUG)
+ 
+-FIND_LIBRARY(OPENAL_LIB NAMES openal openal32 PATHS /usr/lib /usr/local/lib ${OPENAL_LIB_DIR})
++SET(OPENAL_LIB "D:/AstroMenace/prebuilt_dep/openal-soft-1.20.1-bin/libs/Win32/libOpenAL32.dll.a")
+ IF(OPENAL_LIB MATCHES "NOTFOUND")
+   MESSAGE(FATAL_ERROR "OpenAL not installed, cannot build alut - aborting.")
+ ENDIF(OPENAL_LIB MATCHES "NOTFOUND")
+@@ -151,7 +151,7 @@
+ 
+ ADD_LIBRARY(alut SHARED ${ALUT_SOURCES})
+ SET_TARGET_PROPERTIES(alut PROPERTIES VERSION ${VERSION} SOVERSION ${MAJOR_VERSION})
+-TARGET_LINK_LIBRARIES(alut ${OPENAL_LIB} ${ADD_LIBS})
++TARGET_LINK_LIBRARIES(alut "-static -static-libgcc -static-libstdc++" ${OPENAL_LIB} ${ADD_LIBS})
+ 
+ INSTALL_TARGETS(/lib alut)
+ INSTALL_FILES(/include/AL FILES include/AL/alut.h)
+
