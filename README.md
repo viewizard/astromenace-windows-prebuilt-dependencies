@@ -1,4 +1,5 @@
 ### Download prebuilt dependencies for MinGW 32bit build: [prebuilt_dep_mingw_32bit.zip](https://github.com/viewizard/astromenace-windows-prebuilt-dependencies/releases/download/latest/prebuilt_dep_mingw_32bit.zip)
+### Download prebuilt dependencies for MinGW 64bit build: [prebuilt_dep_mingw_64bit.zip](https://github.com/viewizard/astromenace-windows-prebuilt-dependencies/releases/download/latest/prebuilt_dep_mingw_64bit.zip)
 Based on lib's sources and binary packages available for download from `Releases` page.
 
 #### OpenAL (bin)
@@ -18,16 +19,16 @@ https://sourceforge.net/projects/freetype/files/
 
 ### Build
 
-`patches_for_msys2_mingw_32bit_build` contain patches, that were used for libs build. Note, I used absolute paths from my PC, make sure you correct them.
+`patches_for_msys2_mingw_build` contain patches, that were used for libs build. Note, I used absolute paths from my PC, make sure you correct them.
 
-Build commands (MSYS2 + MinGW 32bit) for freealut, libogg and libvorbis:
+Build commands (MSYS2 + MinGW 32bit/64bit) for freealut, libogg and libvorbis:
 ```
 $ mkdir build
 $ cd build
 $ cmake .. -G Ninja -DCMAKE_INSTALL_PREFIX=$PWD/../bin -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=true
 $ cmake --build . --target install
 ```
-Build commands (MSYS2 + MinGW 32bit) for freetype:
+Build commands (MSYS2 + MinGW 32bit/64bit) for freetype:
 ```
 $ mkdir build
 $ cd build
