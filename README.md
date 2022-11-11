@@ -5,6 +5,8 @@ Based on lib's sources and binary packages available for download from `Releases
 #### OpenAL (bin)
 https://openal-soft.org/#download
 
+Note, by default openal-soft release `libOpenAL32.dll.a` and `soft_oal.dll` instead of `OpenAL32.dll`, make sure you rename `soft_oal.dll` into `OpenAL32.dll` (for both, 32bit and 64bit).
+
 #### SDL2 (bin)
 https://www.libsdl.org/download-2.0.php
 
